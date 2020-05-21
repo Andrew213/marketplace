@@ -1,0 +1,164 @@
+@import '_vars';
+@import '_global';
+@import '_fonts';
+
+
+// ------------------------------------------------HEADER
+
+.header-top {
+    background-color: $bg;
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+    }
+}
+
+.header-box {
+    display: flex;
+    align-items: center;
+
+    &__btn {
+        margin-right: 50px;
+        padding: 10px 19px;
+    }
+
+    &__icons {
+        margin-right: 48px;
+
+        .header__icon+.header__icon {
+            margin-left: 33px;
+            margin-right: 0;
+
+        }
+
+        .header__icon {
+            line-height: 1;
+            font-size: 20px;
+            color: #7e8fa1;
+            position: relative;
+
+            .notice-count {
+                color: #fff;
+                font-size: 14px;
+                top: -20px;
+                border-radius: 50%;
+                padding: 6px 8px;
+                position: absolute;
+
+            }
+
+            .notice-alarm {
+                background-color: #ff6a6c;
+            }
+
+            .notice-envelope {
+                background-color: #7fd860;
+            }
+
+            .notice-cart {
+                background-color: #318bed;
+            }
+        }
+    }
+
+    .profile {
+        display: flex;
+        align-items: center;
+
+        &__avatar {
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        &__name {
+            color: #333;
+            font-weight: 500;
+            line-height: 22px;
+            padding: 0;
+            margin: 0;
+        }
+
+        &__price {
+            color: $blue;
+            text-align: left;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+}
+
+.header-bottom__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.menu {
+    display: flex;
+    color: #333;
+
+    &__list {
+        li {
+            display: inline-block;
+            font-weight: 500;
+            font-size: 15px;
+            text-transform: uppercase;
+
+            a {
+                color: #333;
+            }
+
+            &+li {
+                margin-left: 26px;
+            }
+
+        }
+
+
+    }
+
+}
+
+.search-form {
+    max-width: 360px;
+    width: 100%;
+    position: relative;
+    margin-left: 20px;
+
+    &__input {
+        border: 1px solid rgb(217, 223, 229);
+        display: block;
+        outline: none;
+        height: 44px;
+        color: #898f96;
+        font-size: 15px;
+        color: #333;
+        border-radius: 25px;
+        width: 100%;
+        padding-right: 80px;
+        padding-left: 23px;
+
+        &::placeholder {
+            color: #898f96;
+        }
+
+    }
+
+    &__btn {
+        position: absolute;
+        padding: 13px 28px;
+        top: 0;
+        right: 0;
+    }
+}
+
+
+//-------------------------------------------------------section Digital Product Marketplace
+/ .present {
+    background-image: -webkit-linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
+}
