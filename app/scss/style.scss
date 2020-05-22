@@ -124,6 +124,7 @@
 
 }
 
+
 .search-form {
     max-width: 360px;
     width: 100%;
@@ -159,6 +160,154 @@
 
 
 //-------------------------------------------------------section Digital Product Marketplace
-/ .present {
+
+.present {
     background-image: -webkit-linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
+    height: 725px;
+
+    &__inner {
+        color: #fff;
+        padding-top: 178px;
+        text-align: center;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 60px;
+        line-height: 70px;
+
+        span {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 38px;
+        }
+    }
+
+    &__text {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 70px;
+    }
+
+    &__buttons {
+        text-align: center;
+
+        a {
+            color: #fff;
+            margin-right: 28px;
+            padding: 20px 30px 16px;
+            border: 1px solid #fff;
+            border-radius: 30px;
+            transition: all .3s;
+
+            &:hover {
+                color: $blue;
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+.Rectangle_238_copy_2 {
+    border-radius: 6px;
+    background-color: rgb(255, 255, 255);
+
+    position: absolute;
+    left: 420px;
+    top: 809px;
+    width: 1080px;
+    height: 135px;
+    z-index: 729;
+}
+
+.decor {
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    width: 98%;
+    height: 50px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 13px;
+    height: 132px;
+    opacity: 0.502;
+    border-radius: 6px;
+
+}
+
+
+.decor2 {
+    width: 96%;
+    bottom: 26px;
+}
+
+
+.search-product {
+    display: flex;
+    background-color: #fff;
+    padding: 0 40px;
+    height: 132px;
+    border-radius: 6px;
+    z-index: 6;
+    margin-top: 165px;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+
+    .product-form {
+        position: relative;
+        width: 100%;
+
+        &__input,
+        &__select,
+        &__btn {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            border: 1px solid rgb(220, 220, 220);
+            height: 53px;
+        }
+
+        &__input {
+            left: 0;
+            width: 100%;
+            padding: 0px 27px;
+            max-width: 610px;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+
+            &::placeholder {
+                color: #676767;
+            }
+        }
+
+        &__select {
+            border-radius: 0 4px 4px 0;
+            padding: 17px 70px 17px 20px;
+            line-height: 1;
+            right: 287px;
+            appearance: none;
+            -webkit-appearance: none;
+            background: url(../images/icons/down-arrow.svg) 96%/15% no-repeat;
+            background-size: 12px;
+            color: #555;
+            outline: none;
+            cursor: pointer;
+        }
+
+        &__btn {
+            position: absolute;
+            height: 53px;
+            right: 0;
+            border-radius: 4px;
+            width: 221px;
+        }
+    }
+}
+
+
+
+.div {
+    position: relative;
+    width: 100%;
+    height: 100%;
 }
