@@ -300,18 +300,33 @@
     margin-top: 188px;
     margin-bottom: 120px;
 
+    .central-item {
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    }
 
     .advantages-item {
         width: 100%;
         max-width: 362px;
         text-align: center;
         padding: 40px 35px 50px 35px;
-        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        transition: all .3s;
+
+        &:hover {
+            box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        }
+
+
 
         &__title {
             font-size: 24px;
             color: #010101;
             margin: 37px 0;
+        }
+
+        &__text {
+            line-height: 30px;
+            font-weight: 400;
+            font-size: 16px;
         }
     }
 }
@@ -321,43 +336,18 @@
 .weekly-products {
     background-color: $bg;
 
-    &__inner {
-        padding: 120px 0;
-
-        .weekly-slider__wrapper {
-            margin-top: 50px;
-        }
+    .weekly-slider__wrapper {
+        margin-top: 50px;
     }
 }
 
-.title-box {
-    padding: 43px 30px 40px 30px;
-    background-color: #fff;
-    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
-    border-radius: 4px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    &__name {
-        font-size: 30px;
-    }
-
-    &__buttons {
-        background-color: rgb(115, 71, 193);
-        width: 110px;
-        border-radius: 30px;
-        color: #fff;
-        display: flex;
-        justify-content: space-between;
-        padding: 16px 25px;
-    }
-
-    .myarrow {
-        color: #fff;
-        font-size: 14px;
-    }
+.myarrow {
+    color: #fff;
+    font-size: 14px;
 }
+
+
+
 
 .weekly-item {
     border-radius: 4px;
@@ -366,11 +356,14 @@
     display: flex;
     width: 100%;
 
+
     &__img {
         position: relative;
         display: flex;
-        // height: 100%;
+        height: 100%;
         background-color: transparent;
+        min-height: 450px;
+        float: left;
 
         &>img {
             height: 100%;
@@ -408,10 +401,7 @@
 
     .about-box {
         width: 100%;
-        padding-top: 50px;
-        padding-left: 50px;
-        padding-right: 50px;
-        padding-bottom: 10px;
+        padding: 50px 50px 20px 45px;
 
         &__title {
             margin-bottom: 20px;
@@ -419,38 +409,10 @@
             font-weight: 500;
         }
 
-        &__owner {
-            display: flex;
-            align-items: center;
-
-            .owner-name {
-                margin-right: 46px;
-                margin-left: 8px;
-                font-size: 15px;
-                color: #000;
-            }
-
-            .product-category {
-                position: relative;
-
-                &::before {
-                    content: '';
-                    background-image: url(../images/icons/wp-icon.svg);
-                    height: 15px;
-                    width: 15px;
-                    position: absolute;
-                    background-repeat: no-repeat;
-                    background-size: cover;
-                    left: -25px;
-                }
-            }
-        }
 
         &__text {
             margin-top: 20px;
             padding-right: 26px;
-            color: $text;
-            line-height: 30px;
         }
 
         &__tags {
@@ -506,9 +468,239 @@
     }
 }
 
+// ----------------------------------END WEEKLY SLIDER
+
+// ----------------------------------START NEWESR PRODUCTS
+
+.products {
+    background-color: #f6f7fb;
+}
+
+.title-box.product {
+    margin-bottom: 30px;
+
+    .title-box__filter {
+        align-items: center;
+        display: flex;
+
+        span {
+            margin-right: 25px;
+            color: #747b86;
+        }
+    }
+}
+
+.title-box.buttons {
+    height: auto;
+    padding-top: 26px;
+    padding-bottom: 26px;
+}
+
+.products-inner__buttons {
+    margin-bottom: 50px;
+}
+
+.products-buttons {
+    display: table;
 
 
-// .slick-prev:before,
-// .slick-next:before {
-//     display: none;
+    button {
+        background-color: #f1f3f6;
+        color: #747b86;
+        font-size: 15px;
+        padding: 11px 20px 9px;
+
+
+
+        &+button {
+            margin-left: 10px;
+        }
+    }
+
+    .active {
+        background-color: $blue;
+        color: #fff;
+        transition: all .5s;
+    }
+
+}
+
+.products-inner__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+.product-item {
+    border-radius: 4px;
+    box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+    background-color: #fff;
+    width: 360px;
+    margin-bottom: 30px;
+
+    &__img {
+        position: relative;
+
+        &:after {
+            width: 360px;
+            transition: all .5s;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
+            background-image: -webkit-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
+            background-image: -ms-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
+            opacity: 0;
+            z-index: 1;
+        }
+
+        &:hover::after {
+            opacity: 0.902;
+        }
+
+        &:hover .hover-buttons {
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 93px;
+            bottom: 50%;
+            display: block;
+            z-index: 2;
+        }
+    }
+}
+
+.product-about {
+    .top-wrapper {
+        padding: 30px 30px 20px 30px;
+    }
+
+    &__title {
+        font-weight: 500;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .owner {
+        margin-bottom: 20px;
+
+    }
+
+    .product-props {
+        display: flex;
+        border-top: 1px solid rgb(236, 236, 236);
+        font-size: 15px;
+        align-items: center;
+        padding: 15px 0;
+        position: relative;
+
+        &__price {
+            font-weight: 500;
+            margin-left: 30px;
+            color: $blue;
+            background-color: #e6f1fd;
+            border-radius: 28px;
+            padding: 7px 20px;
+        }
+
+        &__like {
+            margin-left: 12px;
+            color: #6f7d8d;
+
+            span {
+                margin-right: 6px;
+            }
+        }
+
+        &__cart {
+            span {
+                margin-right: 8px;
+            }
+
+            margin-right: 30px;
+            float: right;
+            position: absolute;
+            right: 0;
+            color: $blue;
+        }
+    }
+}
+
+.product__star {
+    margin-left: 10px;
+}
+
+.all-items-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+        margin-top: 60px;
+        padding: 20px 30px;
+    }
+
+}
+
+
+// ----------------------------------END NEWESR PRODUCTS
+
+
+// ----------------------------------START FOLLLOWERS FEED
+
+.followers {
+    background-color: $bg;
+}
+
+.followers__title {
+    margin-bottom: 50px;
+
+    .followers__buttons {
+        background-color: $blue;
+        width: 110px;
+        border-radius: 30px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 25px;
+    }
+
+}
+
+.followers__inner {
+    overflow: hidden;
+
+    .slick-slide {
+        margin: 0 30px;
+    }
+
+    .slick-list {
+        margin-left: -30px;
+        margin-right: -30px;
+    }
+
+    .product-item {
+        width: 360px !important;
+    }
+}
+
+// .slick-slide {
+//     width: 360px !important;
+//     margin-right: 300px;
+// }
+
+// .product-item {
+//     width: 360px !important;
+
+
+// }
+
+// .slick-slide {
+
+//     width: 360px !important;
 // }

@@ -6,10 +6,22 @@ $(function () {
         readOnly: true,
         spacing: "3px",
         multiColor: {
-            "endColor": "#ffc001"
+            "endColor": "#ffc015"
         }
     });
 
+    $(".rate-star-product").rateYo({
+        rating: 4.5,
+        starWidth: "12px",
+        readOnly: true,
+        spacing: "3px",
+        multiColor: {
+            "endColor": "#ffc015"
+        }
+    });
+
+    //  prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
+    //         nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
     $('.weekly-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -18,4 +30,22 @@ $(function () {
         prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
         nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
     });
+
+
+
+    $('.followers__inner').slick({
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        appendArrows: $('.followers__buttons'),
+        prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
+        nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
+
+    });
+
+    $('.product-btn').on('click', function () {
+
+        $('.remove').removeClass('active');
+        $(this).addClass('active');
+    });
+    var mixer = mixitup('.products-inner__items');
 });

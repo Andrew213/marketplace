@@ -36,6 +36,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     font-size: 16px;
     font-weight: 400;
+    line-height: 1;
 }
 
 .container {
@@ -45,19 +46,59 @@ body {
     margin: 0 auto;
 }
 
+.section-container {
+    padding: 120px 0;
+}
+
 button {
     border: none;
     background-color: transparent;
     cursor: pointer;
     outline: none;
+
 }
 
 
 .btn {
     background-color: $blue;
-    color: #ffffff;
-    border-radius: 28px;
+    color: #fff;
+    border-radius: 30px;
     text-align: center;
+
+}
+
+
+
+.lnr-heart::before {
+    color: #7f4ec2;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.title-box {
+    height: 110px;
+    padding: 33px 30px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__name {
+        font-size: 30px;
+        padding-right: 10px;
+    }
+
+    &__buttons {
+        background-color: rgb(115, 71, 193);
+        width: 110px;
+        border-radius: 30px;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 25px;
+    }
 }
 
 .hover-buttons {
@@ -83,4 +124,67 @@ button {
     &>a {
         margin-right: 10px;
     }
+}
+
+.owner {
+    display: flex;
+    align-items: center;
+
+    .owner-name {
+        margin-right: 46px;
+        margin-left: 8px;
+        font-size: 15px;
+        color: #000;
+    }
+
+    .product-category-wp {
+        position: relative;
+
+
+        &::before {
+            content: '';
+            background-image: url(../images/icons/wp-icon.svg);
+            height: 15px;
+            width: 15px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -25px;
+        }
+    }
+
+    .product-category-psd {
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url(../images/icons/psd-icon.svg);
+            height: 17px;
+            width: 13px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -25px;
+        }
+    }
+
+    .product-category-html {
+        position: relative;
+
+        &::before {
+            content: '';
+            background-image: url(../images/icons/html-icon.png);
+            height: 17px;
+            width: 15px;
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: cover;
+            left: -25px;
+        }
+    }
+}
+
+.item-text {
+    color: $text;
+    line-height: 30px;
 }
