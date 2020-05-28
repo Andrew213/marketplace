@@ -20,8 +20,6 @@ $(function () {
         }
     });
 
-    //  prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
-    //         nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
     $('.weekly-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -47,5 +45,6 @@ $(function () {
         $('.remove').removeClass('active');
         $(this).addClass('active');
     });
+
     var mixer = mixitup('.products-inner__items');
 });
