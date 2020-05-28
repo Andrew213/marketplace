@@ -24,6 +24,7 @@ $(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
+        adaptiveHeight: true,
         appendArrows: $('.title-box__buttons'),
         prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
         nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'

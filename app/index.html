@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=10" />
+    <link rel="shortcut icon" href="images/icons/favicon.ico" type="image/icon">
     <title>Martplace</title>
     <link rel="stylesheet" href="css/libs.min.css" />
     <link rel="stylesheet" href="css/style.min.css" />
@@ -17,7 +18,7 @@
                 <div class="header-top__inner">
                     <a class="logo header__logo" href="#"><img src="images/logo.png" alt="logo"></a>
                     <div class="header-box">
-                        <button class="header-box__btn btn" type="button">Become a Seller</button>
+                        <a class="header-box__btn btn" href="#">Become a Seller</a>
                         <div class="header-box__icons">
                             <button class="header__icon alarm-icon">
                                 <span class="lnr lnr-alarm"></span>
@@ -32,13 +33,13 @@
                             </button>
                         </div>
                         <div class="header-box__profile">
-                            <button class="profile" type="button">
+                            <div class="profile">
                                 <img class="profile__avatar" src="images/content/avatar.jpg" alt="avatar">
                                 <div class="profile__info">
-                                    <div class="profile__name">Taofiq Hakim</div>
-                                    <div class="profile__price">$20.45</div>
+                                    <div class="profile__name"> <a href="#"> Taofiq Hakim</a></div>
+                                    <div class="profile__price"> <a href="#">$20.45 </a></div>
                                 </div>
-                            </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -50,15 +51,15 @@
                     <div class="header__menu">
                         <nav class="menu">
                             <ul class="menu__list">
-                                <li><a href="#"> home </a></li>
+                                <li><a href="#">home</a></li>
                                 <li><a href="#">all products </a></li>
                                 <li><a href="#">wordpress </a></li>
                                 <li><a href="#">festures</a></li>
-                                <li><a href="#"> Pages</a></li>
+                                <li><a href="#">Pages</a></li>
                             </ul>
                         </nav>
                     </div>
-                    <form class="search-form">
+                    <form class="search-form" action="#">
                         <input class="search-form__input" type="search" name="text"
                             placeholder="Search product here...">
                         <button class="search-form__btn btn" type="submit"><span
@@ -77,26 +78,23 @@
                 <div class="present__text">MartPlace is the most powerful, & customizable template for Easy Digital
                     Downloads Products</div>
                 <div class="present__buttons">
-                    <a href="#">View All Products</a>
-                    <a href="#" style="margin-right: 0;">Popular Products</a>
+                    <a href="#all-products">View All Products</a>
+                    <a href="#popular-products" style="margin-right: 0;">Popular Products</a>
                 </div>
-                <div class="present__search--inner">
-                    <div class="decor "></div>
-                    <div class="decor decor2"></div>
-                    <div class="search-product">
-                        <form class="product-form" action="">
-                            <input class="product-form__input" type="text" value=""
-                                placeholder="Search your products...">
-                            <select class="product-form__select">
-                                <option selected disabled>All Categories </option>
-                                <option>Apples</option>
-                                <option>Pineapples</option>
-                                <option>Chocklate</option>
-                                <option>Pancakes</option>
-                            </select>
-                            <button class="product-form__btn btn">Search Now</button>
-                        </form>
-                    </div>
+                <div class="decor "></div>
+                <div class="decor decor2"></div>
+                <div class="search-product">
+                    <form class="product-form" action="#">
+                        <input class="product-form__input" type="text" value="" placeholder="Search your products...">
+                        <select class="product-form__select">
+                            <option selected disabled>All Categories </option>
+                            <option>Apples</option>
+                            <option>Pineapples</option>
+                            <option>Chocklate</option>
+                            <option>Pancakes</option>
+                        </select>
+                        <button class="product-form__btn btn">Search Now</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -105,19 +103,19 @@
         <div class="container">
             <div class="advantages__inner">
                 <div class="advantages-item">
-                    <div class="advantages-item__img"><img src="images/pic1.png" alt=""></div>
+                    <div class="advantages-item__img"><img src="images/pic1.png" alt="icon"></div>
                     <div class="advantages-item__title">Best UX Research</div>
                     <div class="advantages-item__text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra,
                         justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.</div>
                 </div>
                 <div class="advantages-item central-item">
-                    <div class="advantages-item__img"><img src="images/pic2.png" alt=""></div>
+                    <div class="advantages-item__img"><img src="images/pic2.png" alt="icon"></div>
                     <div class="advantages-item__title">Fully Responsive</div>
                     <div class="advantages-item__text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra,
                         justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus. lorem</div>
                 </div>
                 <div class="advantages-item">
-                    <div class="advantages-item__img"><img src="images/pic3.png" alt="ddd"></div>
+                    <div class="advantages-item__img"><img src="images/pic3.png" alt="icon"></div>
                     <div class="advantages-item__title">Buy & Sell Easily</div>
                     <div class="advantages-item__text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra,
                         justo ut scelerisque the mattis, leo quam aliquet diam congue is laoreet elit metus.</div>
@@ -125,7 +123,7 @@
             </div>
         </div>
     </section>
-    <section class="weekly-products">
+    <section class="weekly-products" id="popular-products">
         <div class="container">
             <div class="section-container">
                 <div class="weekly-products__title title-box">
@@ -150,11 +148,12 @@
                                     <p>One Page Resume Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avater" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avater" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> AazzTech </a>
                                     <div class="product-category-wp">
-                                        <a href="">WordPress</a>
+                                        <a href="#">WordPress</a>
                                     </div>
                                 </div>
                                 <div class="about-box__text item-text">
@@ -193,11 +192,12 @@
                                     <p>Second Page Resume Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avater" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avater" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> AazzTech </a>
                                     <div class="product-category-wp">
-                                        <a href="">WordPress</a>
+                                        <a href="#">WordPress</a>
                                     </div>
                                 </div>
                                 <div class="about-box__text item-text">
@@ -236,18 +236,42 @@
                                     <p>Third Page Resume Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avater" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avater" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> AazzTech </a>
                                     <div class="product-category-wp">
-                                        <a href="">WordPress</a>
+                                        <a href="#">WordPress</a>
                                     </div>
                                 </div>
                                 <div class="about-box__text item-text">
                                     <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente minima unde a
                                         sint magnam nesciunt enim accusantium nemo laboriosam iusto in qui reprehenderit
                                         explicabo doloremque odio at similique, dicta illo! Lorem ipsum dolor sit amet
-                                        consectetur adipisicing elit. Adipisci</p>
+                                        consectetur adipisicing elit. Adipisci Lorem ipsum dolor sit, amet consectetur
+                                        adipisicing elit. Fuga soluta dignissimos culpa. Optio eum similique, corporis
+                                        quibusdam molestias fuga ipsum a, ipsa provident at iste atque cum quaerat magni
+                                        odit! Hic debitis provident incidunt fugit corporis qui vero esse illum fugiat
+                                        rerum! Quisquam maiores ipsa nesciunt nemo ullam ut! Numquam ratione delectus
+                                        architecto omnis beatae dolore minima cupiditate deserunt expedita? Est debitis
+                                        reprehenderit molestiae magni expedita dignissimos aut facere voluptatum, quia
+                                        nemo commodi aperiam maiores saepe voluptate, dicta omnis soluta quo error quae
+                                        eaque, ipsam ipsa ut alias? Esse, blanditiis. Lorem ipsum dolor sit, amet
+                                        consectetur adipisicing elit. Alias quos maiores veniam tempore doloribus! At
+                                        omnis illum quae, consequuntur cum voluptates voluptatibus earum rerum tempore
+                                        obcaecati possimus labore ullam deleniti! At, eaque ducimus voluptates sint
+                                        atque autem ab ea fugiat? Veniam maiores quisquam quasi eveniet non illo in
+                                        laboriosam dolor doloribus, quo ratione dolore, eius a facilis earum numquam
+                                        commodi. Beatae, ullam quasi repudiandae assumenda voluptatum et cum corporis
+                                        dolorem vel quidem illum iste vero, amet numquam laudantium nobis architecto!
+                                        Obcaecati necessitatibus ratione odit inventore consectetur voluptatibus rem
+                                        consequuntur iusto? Ullam voluptate odit atque, numquam porro fuga incidunt
+                                        tenetur recusandae magni suscipit tempore soluta! Voluptatem architecto animi
+                                        quidem cum expedita pariatur mollitia recusandae, quo, corrupti eligendi
+                                        voluptas. Repudiandae, natus quo. Consequuntur tempora enim optio ducimus
+                                        deserunt reprehenderit facilis, veritatis rerum impedit nesciunt ex, minus
+                                        maiores sit provident amet commodi tenetur corrupti voluptates. Alias molestias
+                                        itaque, consequatur ut excepturi omnis tenetur!</p>
                                 </div>
                                 <div class="about-box__tags">
                                     <a class="tag website-tag " href="#">website</a>
@@ -269,7 +293,7 @@
             </div>
         </div>
     </section>
-    <section class="products">
+    <section class="products" id="all-products">
         <div class="container">
             <div class="section-container">
                 <div class="title-box product">
@@ -317,12 +341,12 @@
                                         <p>E-commerce Shopping Cart</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Theme-Valley </a>
                                         <div class="product-category-wp">
-                                            <a href="">Plugin</a>
+                                            <a href="#">Plugin</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -332,9 +356,6 @@
                                 <div class="product-props">
                                     <div class="product-props__price">$20</div>
                                     <div class="product-props__like"><span class="lnr lnr-heart"></span>90</div>
-                                    <!-- <div class="product__star">
-                                        <div class="rate-star"></div>
-                                    </div> -->
                                     <div class="product-props__cart"><span class="lnr lnr-cart"></span>246</div>
                                 </div>
                             </div>
@@ -353,12 +374,12 @@
                                         <p>Marketify Coffee Shop</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> EchoTheme</a>
                                         <div class="product-category-psd">
-                                            <a href="">PSD</a>
+                                            <a href="#">PSD</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -368,9 +389,6 @@
                                 <div class="product-props">
                                     <div class="product-props__price">$18</div>
                                     <div class="product-props__like"><span class="lnr lnr-heart"></span>48</div>
-                                    <!-- <div class="product__star">
-                                        <div class="rate-star"></div>
-                                    </div> -->
                                     <div class="product-props__cart"><span class="lnr lnr-cart"></span>50</div>
                                 </div>
                             </div>
@@ -390,12 +408,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -426,12 +444,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -462,12 +480,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -498,12 +516,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -534,12 +552,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -570,12 +588,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -606,12 +624,12 @@
                                         <p>Bryson - Portfolio Template</p>
                                     </div>
                                     <div class="owner">
-                                        <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png"
-                                                alt="">
+                                        <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                                alt="avatar">
                                         </a>
                                         <a class="owner-name" href="#"> Artcorner </a>
                                         <div class="product-category-html">
-                                            <a href="">HTML</a>
+                                            <a href="#">HTML</a>
                                         </div>
                                     </div>
                                     <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -661,11 +679,12 @@
                                     <p>Bryson - Portfolio Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> Artcorner </a>
                                     <div class="product-category-html">
-                                        <a href="">HTML</a>
+                                        <a href="#">HTML</a>
                                     </div>
                                 </div>
                                 <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -695,11 +714,12 @@
                                     <p>Bryson - Portfolio Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> Artcorner </a>
                                     <div class="product-category-html">
-                                        <a href="">HTML</a>
+                                        <a href="#">HTML</a>
                                     </div>
                                 </div>
                                 <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -729,11 +749,12 @@
                                     <p>Bryson - Portfolio Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> Artcorner </a>
                                     <div class="product-category-html">
-                                        <a href="">HTML</a>
+                                        <a href="#">HTML</a>
                                     </div>
                                 </div>
                                 <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -763,11 +784,12 @@
                                     <p>Bryson - Portfolio Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> Artcorner </a>
                                     <div class="product-category-html">
-                                        <a href="">HTML</a>
+                                        <a href="#">HTML</a>
                                     </div>
                                 </div>
                                 <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -797,11 +819,12 @@
                                     <p>Bryson - Portfolio Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> Artcorner </a>
                                     <div class="product-category-html">
-                                        <a href="">HTML</a>
+                                        <a href="#">HTML</a>
                                     </div>
                                 </div>
                                 <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.
@@ -831,11 +854,12 @@
                                     <p>Bryson - Portfolio Template</p>
                                 </div>
                                 <div class="owner">
-                                    <a class="owner-avatar" href=""><img src="images/content/owner-avatar.png" alt="">
+                                    <a class="owner-avatar" href="#"><img src="images/content/owner-avatar.png"
+                                            alt="avatar">
                                     </a>
                                     <a class="owner-name" href="#"> Artcorner </a>
                                     <div class="product-category-html">
-                                        <a href="">HTML</a>
+                                        <a href="#">HTML</a>
                                     </div>
                                 </div>
                                 <div class="product-about__text item-text">Nunc placerat mi id nisi interdum mollis.

@@ -3,21 +3,31 @@
 @import '_fonts';
 
 
-// ------------------------------------------------HEADER
+// ------------------------------------------------START HEADER
 
 .header-top {
     background-color: $bg;
 
     &__inner {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         height: 100px;
     }
 }
 
 .header-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     &__btn {
@@ -47,7 +57,6 @@
                 border-radius: 50%;
                 padding: 6px 8px;
                 position: absolute;
-
             }
 
             .notice-alarm {
@@ -65,7 +74,11 @@
     }
 
     .profile {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         &__avatar {
@@ -77,53 +90,52 @@
             color: #333;
             font-weight: 500;
             line-height: 22px;
-            padding: 0;
-            margin: 0;
         }
 
         &__price {
-            color: $blue;
-            text-align: left;
-            padding: 0;
-            margin: 0;
+            a {
+                color: $blue;
+            }
         }
     }
-
 }
 
 .header-bottom__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     height: 80px;
-}
 
-.menu {
-    display: flex;
-    color: #333;
+    .menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        color: #333;
 
-    &__list {
-        li {
-            display: inline-block;
-            font-weight: 500;
-            font-size: 15px;
-            text-transform: uppercase;
+        &__list {
+            li {
+                display: inline-block;
+                font-weight: 500;
+                font-size: 15px;
+                text-transform: uppercase;
 
-            a {
-                color: #333;
+                a {
+                    color: #333;
+                }
+
+                &+li {
+                    margin-left: 26px;
+                }
             }
-
-            &+li {
-                margin-left: 26px;
-            }
-
         }
-
-
     }
-
 }
-
 
 .search-form {
     max-width: 360px;
@@ -144,6 +156,22 @@
         padding-right: 80px;
         padding-left: 23px;
 
+        &::-webkit-input-placeholder {
+            color: #898f96;
+        }
+
+        &::-moz-placeholder {
+            color: #898f96;
+        }
+
+        &:-ms-input-placeholder {
+            color: #898f96;
+        }
+
+        &::-ms-input-placeholder {
+            color: #898f96;
+        }
+
         &::placeholder {
             color: #898f96;
         }
@@ -158,8 +186,9 @@
     }
 }
 
+//-----------------------------------------END HEADER
 
-//-------------------------------------------------------section Digital Product Marketplace
+//-----------------------------------------START  PRESENT SECTION
 
 .present {
     background-image: -webkit-linear-gradient(180deg, rgb(0, 48, 222) 0%, rgb(23, 69, 237) 54%, rgb(46, 90, 251) 100%);
@@ -198,6 +227,8 @@
             padding: 20px 30px 16px;
             border: 1px solid #fff;
             border-radius: 30px;
+            -webkit-transition: all .3s;
+            -o-transition: all .3s;
             transition: all .3s;
 
             &:hover {
@@ -220,17 +251,16 @@
     height: 132px;
     opacity: 0.502;
     border-radius: 6px;
-
 }
-
 
 .decor2 {
     width: 96%;
     bottom: 26px;
 }
 
-
 .search-product {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: #fff;
     padding: 0 40px;
@@ -238,8 +268,8 @@
     border-radius: 6px;
     z-index: 6;
     margin-top: 165px;
+    -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
     box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-
 
     .product-form {
         position: relative;
@@ -264,6 +294,22 @@
             border-radius: 4px 0 0 4px;
             outline: none;
 
+            &::-webkit-input-placeholder {
+                color: #676767;
+            }
+
+            &::-moz-placeholder {
+                color: #676767;
+            }
+
+            &:-ms-input-placeholder {
+                color: #676767;
+            }
+
+            &::-ms-input-placeholder {
+                color: #676767;
+            }
+
             &::placeholder {
                 color: #676767;
             }
@@ -274,6 +320,7 @@
             padding: 17px 70px 17px 20px;
             line-height: 1;
             right: 287px;
+            -moz-appearance: none;
             appearance: none;
             -webkit-appearance: none;
             background: url(../images/icons/down-arrow.svg) 96%/15% no-repeat;
@@ -294,16 +341,22 @@
 }
 
 .advantages__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-top: 188px;
     margin-bottom: 120px;
 
     .central-item {
+        -webkit-box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
         box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
     }
-
 }
 
 .advantages-item {
@@ -311,6 +364,8 @@
     max-width: 362px;
     text-align: center;
     padding: 40px 35px 50px 35px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
     transition: all .3s;
 
     &__title {
@@ -326,7 +381,9 @@
     }
 }
 
-// -----------------------------------------WEEKLY PRODUCTS SLIDER
+//------------------------------------------END  PRESENT SECTION
+
+// -----------------------------------------START WEEKLY PRODUCTS SLIDER
 
 .weekly-products {
     background-color: $bg;
@@ -341,30 +398,28 @@
     font-size: 14px;
 }
 
-
-
-
+// Решил сделать флоатамми, для обтекания при большем кол-ве текстаю
 .weekly-item {
     border-radius: 4px;
+    -webkit-box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
     box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
     background-color: #fff;
-    display: flex;
     width: 100%;
-
 
     &__img {
         position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         height: 100%;
         background-color: transparent;
         min-height: 450px;
         float: left;
-
-        &>img {
-            height: 100%;
-        }
+        margin-right: 50px;
 
         &:after {
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
             transition: all .5s;
             content: '';
             position: absolute;
@@ -372,8 +427,9 @@
             left: 0;
             right: 0;
             bottom: 0;
+            background-image: -webkit-gradient(linear, right top, left top, from(rgb(6, 116, 236)), color-stop(46%, rgb(61, 94, 215)), to(rgb(115, 71, 193)));
+            background-image: -o-linear-gradient(right, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
             background-image: linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
-            background-image: -webkit-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
             background-image: -ms-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
             opacity: 0;
             z-index: 1;
@@ -397,13 +453,13 @@
     .about-box {
         width: 100%;
         padding: 50px 50px 20px 45px;
+        min-height: 450px;
 
         &__title {
             margin-bottom: 20px;
             font-size: 24px;
             font-weight: 500;
         }
-
 
         &__text {
             margin-top: 20px;
@@ -426,7 +482,11 @@
         .properties {
             margin-top: 40px;
             padding-top: 20px;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
             align-items: center;
             border-top: 1px solid rgb(236, 236, 236);
             position: relative;
@@ -475,7 +535,11 @@
     margin-bottom: 30px;
 
     .title-box__filter {
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
 
         span {
@@ -498,14 +562,11 @@
 .products-buttons {
     display: table;
 
-
     button {
         background-color: #f1f3f6;
         color: #747b86;
         font-size: 15px;
         padding: 11px 20px 9px;
-
-
 
         &+button {
             margin-left: 10px;
@@ -515,21 +576,29 @@
     .active {
         background-color: $blue;
         color: #fff;
+        -webkit-transition: all .5s;
+        -o-transition: all .5s;
         transition: all .5s;
     }
-
 }
 
 .products-inner__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .product-item {
     border-radius: 4px;
+    -webkit-box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
     box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
     background-color: #fff;
     width: 360px;
@@ -540,6 +609,8 @@
 
         &:after {
             width: 360px;
+            -webkit-transition: all .5s;
+            -o-transition: all .5s;
             transition: all .5s;
             content: '';
             position: absolute;
@@ -547,8 +618,9 @@
             left: 0;
             right: 0;
             bottom: 0;
+            background-image: -webkit-gradient(linear, right top, left top, from(rgb(6, 116, 236)), color-stop(46%, rgb(61, 94, 215)), to(rgb(115, 71, 193)));
+            background-image: -o-linear-gradient(right, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
             background-image: linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
-            background-image: -webkit-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
             background-image: -ms-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
             opacity: 0;
             z-index: 1;
@@ -583,13 +655,16 @@
 
     .owner {
         margin-bottom: 20px;
-
     }
 
     .product-props {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         border-top: 1px solid rgb(236, 236, 236);
         font-size: 15px;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
         padding: 15px 0;
         position: relative;
@@ -631,20 +706,23 @@
 }
 
 .all-items-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 
     button {
         margin-top: 60px;
         padding: 20px 30px;
     }
-
 }
 
-
 // ----------------------------------END NEWEST PRODUCTS
-
 
 // ----------------------------------START FOLLLOWERS FEED
 
@@ -660,11 +738,14 @@
         width: 110px;
         border-radius: 30px;
         color: #fff;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
         padding: 16px 25px;
     }
-
 }
 
 .followers__inner {
@@ -688,20 +769,24 @@
 
 // ----------------------------------START STATISTICS SECTION
 
-
 .statistics {
     background-color: #212225;
 
     .statistics__inner {
         padding: 95px 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
         justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 }
 
 .statistics-item {
-
     text-align: center;
 
     &__text {
@@ -734,7 +819,6 @@
     .item-members {
         color: $red;
     }
-
 }
 
 // ----------------------------------END STATISTICS SECTION
@@ -763,11 +847,17 @@
 }
 
 .excellence-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
     .advantages-item {
+        -webkit-box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
         box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
         margin-bottom: 30px;
         position: relative;
@@ -823,3 +913,5 @@
         }
     }
 }
+
+// ----------------------------------END EXCELLENCE SECTION
