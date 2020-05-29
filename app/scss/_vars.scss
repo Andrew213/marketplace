@@ -5,3 +5,8 @@ $text: #555555;
 $green: #77de51;
 $gold: #feb71d;
 $red: #ff6a6d;
+
+@mixin shadow {
+    -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+}

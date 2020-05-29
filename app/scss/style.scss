@@ -72,30 +72,30 @@
             }
         }
     }
+}
 
-    .profile {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
+.profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 
-        &__avatar {
-            border-radius: 50%;
-            margin-right: 20px;
-        }
+    &__avatar {
+        border-radius: 50%;
+        margin-right: 20px;
+    }
 
-        &__name {
-            color: #333;
-            font-weight: 500;
-            line-height: 22px;
-        }
+    &__name {
+        color: #333;
+        font-weight: 500;
 
-        &__price {
-            a {
-                color: $blue;
-            }
+    }
+
+    &__price {
+        a {
+            color: $blue;
         }
     }
 }
@@ -268,8 +268,7 @@
     border-radius: 6px;
     z-index: 6;
     margin-top: 165px;
-    -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    @include shadow;
 
     .product-form {
         position: relative;
@@ -354,8 +353,7 @@
     margin-bottom: 120px;
 
     .central-item {
-        -webkit-box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
-        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        @include shadow;
     }
 }
 
@@ -401,8 +399,7 @@
 // Решил сделать флоатамми, для обтекания при большем кол-ве текстаю
 .weekly-item {
     border-radius: 4px;
-    -webkit-box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
-    box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+    @include shadow;
     background-color: #fff;
     width: 100%;
 
@@ -525,7 +522,7 @@
 
 // ----------------------------------END WEEKLY SLIDER
 
-// ----------------------------------START NEWESR PRODUCTS
+// ----------------------------------START NEWEST PRODUCTS
 
 .products {
     background-color: #f6f7fb;
@@ -598,8 +595,7 @@
 
 .product-item {
     border-radius: 4px;
-    -webkit-box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
-    box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
+    @include shadow;
     background-color: #fff;
     width: 360px;
     margin-bottom: 30px;
@@ -824,26 +820,8 @@
 // ----------------------------------END STATISTICS SECTION
 
 // ----------------------------------START EXCELLENCE SECTION
-
-.excellence-title {
-    margin: 0 auto;
-    text-align: center;
-    max-width: 630px;
-
-    &__heading {
-        font-size: 36px;
-        margin-bottom: 28px;
-
-        span {
-            color: $blue;
-        }
-    }
-
-    &__text {
-        line-height: 30px;
-        color: $text;
-        margin-bottom: 45px;
-    }
+.excellence__title {
+    margin-bottom: 45px;
 }
 
 .excellence-inner {
@@ -857,8 +835,7 @@
     flex-wrap: wrap;
 
     .advantages-item {
-        -webkit-box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
-        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+        @include shadow;
         margin-bottom: 30px;
         position: relative;
 
@@ -915,3 +892,162 @@
 }
 
 // ----------------------------------END EXCELLENCE SECTION
+
+// ----------------------------------START SELLBUY SECTION
+.sellbuy {
+    display: flex;
+    justify-content: center;
+
+    .sell-box {
+        background-image: url(../images/sell-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // display: flex;
+        // justify-content: flex-end;
+        margin-right: -2px;
+        width: 100%;
+
+        .btn {
+            color: $blue;
+        }
+
+    }
+
+    .buy-box {
+        background-image: url(../images/buy-bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        // display: flex;
+        // justify-content: flex-end;
+        margin-left: -2px;
+        width: 100%;
+
+        .btn {
+            color: $purpure;
+        }
+    }
+
+}
+
+.sellbuy-item {
+    padding: 100px 190px;
+    text-align: center;
+    color: #fff;
+
+    &__icon {
+        margin-bottom: 48px;
+    }
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        line-height: 30px;
+        margin-bottom: 35px;
+    }
+
+    &__btn {
+        .btn {
+            padding: 22px 28px;
+            background-color: #FFF;
+        }
+    }
+}
+
+// ----------------------------------END SELLBUY SECTION
+
+// ----------------------------------START FEEDBACK SECTION
+
+.feedback__inner {
+    display: flex;
+    margin-bottom: 10px; //уменьшен из-за паддингов слайдера line: 978
+    position: relative;
+    overflow: hidden;
+
+    .slick-slide {
+        margin: 0 30px;
+    }
+
+    .slick-list {
+        margin-left: -30px;
+        margin-right: -30px;
+        padding: 50px 40px; // чтобы не обрезалась тень
+    }
+
+
+
+}
+
+.feedback-item {
+    padding: 50px 38px 35px 38px;
+    width: 100%;
+    border-left: 1px solid $blue;
+    border-radius: 0px 6px 6px 0px;
+    @include shadow;
+
+    .profile {
+        margin-bottom: 15px;
+        position: relative;
+
+        &__name {
+            a {
+                margin-bottom: 12px;
+                color: #000;
+                font-size: 20px;
+            }
+        }
+
+        &__prof {
+            a {
+                color: $text;
+            }
+        }
+
+        span {
+            position: absolute;
+            right: 0;
+            font-size: 50px;
+            top: 0;
+            color: #e8e8e8;
+        }
+    }
+
+    &__text {
+        line-height: 30px;
+        color: $text;
+    }
+}
+
+.feedback-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+.feedback-arrow {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    @include shadow;
+    position: absolute;
+
+    &.prev-arrow {
+        top: 150px;
+        left: 10px;
+        color: $purpure;
+    }
+
+    &.next-arrow {
+        top: 150px;
+        right: 10px;
+        color: $blue;
+    }
+}

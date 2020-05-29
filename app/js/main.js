@@ -41,6 +41,19 @@ $(function () {
 
     });
 
+    $('.feedback__inner').slick({
+        // adaptiveHeight: true,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        slideWidth: 555,
+        slideMargin: 30,
+        appendArrows: $('.feedback-slider-arrows'),
+        prevArrow: '<button class="prev-arrow feedback-arrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
+        nextArrow: '<button class="next-arrow feedback-arrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
+
+
+    });
+
     $('.product-btn').on('click', function () {
 
         $('.remove').removeClass('active');
