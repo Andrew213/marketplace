@@ -1063,9 +1063,10 @@
         margin-bottom: 50px;
     }
 
-    &__inner {
+    .latestnews__inner {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
     }
 }
 
@@ -1073,9 +1074,17 @@
     background-color: #fff;
     @include shadow;
     width: 361px;
+    border-radius: 6px;
+
+    &+& {
+        margin-left: 10px;
+    }
+
+    // margin-right: 20px;
 
     .latestnews-about {
         padding: 30px 30px 0px 30px;
+        min-height: 185px;
 
         &__title {
             font-weight: 500;
@@ -1101,6 +1110,10 @@
         font-size: 15px;
         height: 60px;
         position: relative;
+
+        a {
+            color: rgb(126, 126, 126);
+        }
 
         // Вертикальная линия
         .line {
@@ -1144,3 +1157,51 @@
 }
 
 // ----------------------------------END LATESTNEWS SECTION
+
+// ----------------------------------START GUARANTEE SECTION
+
+.guarantee__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.guarantee-item__wrapper {
+    padding: 60px 0px;
+
+    &.money {
+        padding-right: 128px;
+
+        span {
+            color: $blue;
+        }
+    }
+
+    &.support {
+        padding-left: 135px;
+
+        span {
+            color: $purpure;
+        }
+    }
+}
+
+.guarantee-item {
+    text-align: center;
+
+    &.support-item {
+        border-left: 1px solid rgb(232, 234, 243);
+    }
+
+    &__icon {
+        margin-bottom: 30px;
+    }
+
+    &__text {
+        font-size: 24px;
+    }
+
+}
+
+// ----------------------------------END GUARANTEE SECTION
