@@ -1118,16 +1118,9 @@
         // Вертикальная линия
         .line {
             position: absolute;
-            display: flex; // Флекс, чтобы задать выравнивание псевдоэл.
             height: 40px;
             width: 0px;
             left: 50%;
-
-            &::after {
-                content: "";
-                border-right: 1.5px solid rgb(236, 236, 236);
-                align-self: unset;
-            }
         }
 
         &__date {
@@ -1156,22 +1149,40 @@
     }
 }
 
+
+
 // ----------------------------------END LATESTNEWS SECTION
 
 // ----------------------------------START GUARANTEE SECTION
+.guarantee {
+    .line-align {
+        position: relative;
+    }
+
+    .line {
+        min-height: 296px;
+    }
+}
 
 .guarantee__inner {
+    // position: relative;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
+    z-index: 3;
+
 }
 
 
 .guarantee-item__wrapper {
     padding: 60px 0px;
 
+
+
+
     &.money {
-        padding-right: 128px;
+
+        margin-right: 164px;
 
         span {
             color: $blue;
@@ -1179,8 +1190,8 @@
     }
 
     &.support {
-        padding-left: 135px;
 
+        // padding-left: 135px;
         span {
             color: $purpure;
         }
@@ -1190,9 +1201,9 @@
 .guarantee-item {
     text-align: center;
 
-    &.support-item {
-        border-left: 1px solid rgb(232, 234, 243);
-    }
+    // &.support-item {
+    //     border-left: 1px solid rgb(232, 234, 243);
+    // }
 
     &__icon {
         margin-bottom: 30px;
@@ -1202,6 +1213,47 @@
         font-size: 24px;
     }
 
+
+
 }
 
+
+
 // ----------------------------------END GUARANTEE SECTION
+
+// ---------------------------------START GUARANTEE SECTION
+.joinus {
+    background-image: -webkit-gradient(linear, right top, left top, from(rgb(6, 116, 236)), color-stop(46%, rgb(61, 94, 215)), to(rgb(115, 71, 193)));
+    background-image: -o-linear-gradient(right, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
+    background-image: linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
+    background-image: -ms-linear-gradient(270deg, rgb(6, 116, 236) 0%, rgb(61, 94, 215) 46%, rgb(115, 71, 193) 100%);
+
+}
+
+.joinus__inner {
+    padding: 110px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.joinus-item {
+    color: #fff;
+    text-align: center;
+
+    &__title {
+        font-size: 36px;
+        margin-bottom: 23px;
+    }
+
+    &__text {
+        font-size: 18px;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        color: $blue;
+        background-color: #fff;
+    }
+
+}
