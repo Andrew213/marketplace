@@ -7,6 +7,17 @@ $gold: #feb71d;
 $red: #ff6a6d;
 
 @mixin shadow {
-    -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
-    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+}
+
+.BG {
+  border-radius: 4px;
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 974px;
+  top: 7506px;
+  width: 555px;
+  height: 315px;
+  z-index: 165;
 }
