@@ -1,6 +1,10 @@
+html {
+    box-sizing: border-box;
+
+}
+
 html,
 body {
-    box-sizing: border-box;
     height: 100%;
 }
 
@@ -26,28 +30,17 @@ body {
     flex: 0 0 auto;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    padding: 0;
-    margin: 0;
-}
-
 a {
     display: inline-block;
     text-decoration: none;
-    color: #000000;
 }
 
-ul,
-li {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+// ul,
+// li {
+//     margin: 0;
+//     padding: 0;
+//     list-style: none;
+// }
 
 body {
     font-family: 'Quicksand', sans-serif;
@@ -73,13 +66,14 @@ body {
     padding: 120px 0;
 }
 
-button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-    outline: none;
 
-}
+// button {
+//     border: none;
+//     background-color: transparent;
+//     cursor: pointer;
+//     outline: none;
+
+// }
 
 
 .btn {
@@ -114,38 +108,44 @@ button {
         padding-right: 10px;
     }
 
-    &__buttons {
-        background-color: rgb(115, 71, 193);
-        max-width: 110px;
-        border-radius: 30px;
+    &__arrow {
+        @include reset-btn;
+        background-color: transparent;
         color: #fff;
-        display: flex;
-        justify-content: space-between;
-        padding: 15px 25px;
+        position: relative;
 
-        .myarrow+.myarrow {
+        &+& {
             margin-left: 35px;
+
         }
 
-        .prev-arrow::before {
-            content: "";
-            width: 70px;
-            height: 70px;
-            position: absolute;
-            top: -200%;
-            right: 0;
-        }
+        &:focus {
+            color: red;
+            @include shadow;
 
-        .next-arrow::after {
-            content: "";
-            width: 70px;
-            height: 70px;
-            position: absolute;
-            top: -200%;
-            left: 0;
         }
     }
+
+    &__prev-arrow::before {
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: -150%;
+        right: 0;
+    }
+
+    &__next-arrow::after {
+        content: "";
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        top: -150%;
+        left: 0;
+    }
 }
+
+
 
 
 
@@ -178,6 +178,7 @@ button {
 .owner {
     display: flex;
     align-items: center;
+    margin-bottom: 20px;
 
     &__name {
         margin-right: 20px;
@@ -188,28 +189,24 @@ button {
 
     &__avatar {
 
-        img {
-            border-radius: 50%;
-            height: 30px;
-            width: 30px;
-        }
+        object-fit: cover;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+
     }
 
-    &__category-wp,
-    &__category-html {
+    &__category {
         background-repeat: no-repeat;
         padding-left: 25px;
         color: $purpure;
 
     }
 
-    &__category-psd {
-        background-repeat: no-repeat;
-        padding-left: 20px;
-        color: $purpure;
+}
 
-    }
-
+.star {
+    margin-left: 10px;
 }
 
 .item-text {
@@ -225,10 +222,10 @@ button {
     &__heading {
         font-size: 36px;
         margin-bottom: 18px;
+    }
 
-        span {
-            color: $blue;
-        }
+    &__heading--blue {
+        color: $blue;
     }
 
     &__text {

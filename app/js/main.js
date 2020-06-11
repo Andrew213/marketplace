@@ -1,6 +1,6 @@
 $(function () {
 
-    $(".rate-star").rateYo({
+    $(".properties__star").rateYo({
         rating: 4.5,
         starWidth: "15px",
         readOnly: true,
@@ -10,7 +10,7 @@ $(function () {
         }
     });
 
-    $(".rate-star-product").rateYo({
+    $(".star").rateYo({
         rating: 4.5,
         starWidth: "13px",
         readOnly: true,
@@ -25,9 +25,9 @@ $(function () {
         slidesToScroll: 1,
         fade: true,
         adaptiveHeight: true,
-        appendArrows: $('.title-box__buttons'),
-        prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
-        nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
+        appendArrows: $('.weekly__buttons'),
+        prevArrow: '<button class="title-box__prev-arrow title-box__arrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
+        nextArrow: '<button class="title-box__next-arrow title-box__arrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
     });
 
 
@@ -37,8 +37,8 @@ $(function () {
         slidesToScroll: 3,
         slideWidth: 360,
         appendArrows: $('.followers__buttons'),
-        prevArrow: '<button class="prev-arrow myarrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
-        nextArrow: '<button class="next-arrow myarrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
+        prevArrow: '<button class="title-box__prev-arrow title-box__arrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
+        nextArrow: '<button class="title-box__next-arrow title-box__arrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
 
     });
 
@@ -49,29 +49,52 @@ $(function () {
         slideWidth: 555,
         slideMargin: 30,
         appendArrows: $('.feedback__slider-arrows'),
-        prevArrow: '<button class="prev-arrow feedback-arrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
-        nextArrow: '<button class="next-arrow feedback-arrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
+        prevArrow: '<button class="prev-arrow feedback__arrow" type="button"><span class="lnr lnr-chevron-left"></span> </button>',
+        nextArrow: '<button class="next-arrow feedback__arrow" type="button"><span class="lnr lnr-chevron-right"></span></button>'
 
 
     });
 
+    $('.menu__link').on('click', function () {
+        $('.menu__list-item').find('a').removeClass('menu__link--active');
+        $(this).addClass('menu__link--active');
+    });
+
+    $('.search-form__input').focus(function () {
+
+        (this).toggleClass('border')
+
+    })
 
     $('.products__title-btn').on('click', function () {
-        $(".products__title-list").toggleClass('list-active');
+        $(".products__drop-list").toggleClass('list-active');
     });
 
 
-    $('.products__title-link').on('click', function () {
+    $('.products__drop-link').on('click', function () {
 
-        $('.products__title-link--remove').removeClass('link-active');
-        $(this).addClass('link-active');
+        $(".products__drop-list").find('a').removeClass('link-active');
+        $(this).children().addClass('link-active');
     });
 
 
-    $('.product-btn').on('click', function () {
+    $('.products__btn').on('click', function () {
 
-        $('.products__buttons--remove').removeClass('active');
-        $(this).addClass('active');
+        $('.products__btn').removeClass('products__btn--active');
+        $(this).addClass('products__btn--active');
+    });
+
+
+    $('.products__all-btn').on('click', function () {
+        $('.products__btn').removeClass('products__btn--active');
+    });
+
+
+
+    $('.grid__top-btn').on('click', function () {
+
+        $('.grid-remove').removeClass('grid-active');
+        $(this).addClass('grid-active');
     });
 
 

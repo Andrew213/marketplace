@@ -1,0 +1,18 @@
+[0609/115232.159:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0609/130355.516:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0609/131110.312:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0609/191249.992:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0610/081358.418:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0610/125756.246:ERROR:crash_report_database_win.cc(428)] unexpected header
+[0611/141843.089:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0611/141843.340:ERROR:exception_snapshot_win.cc(98)] thread ID 7140 not found in process
+[0611/141843.074:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0611/141843.340:ERROR:exception_snapshot_win.cc(98)] thread ID 6544 not found in process
+[0611/141843.089:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0611/141843.074:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0611/141843.089:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0611/141843.105:ERROR:process_reader_win.cc(123)] NtOpenThread: {Отказано в доступе} Процесс запросил доступ к объекту, но права на доступ не предоставлены. (0xc0000022)
+[0611/141843.340:ERROR:exception_snapshot_win.cc(98)] thread ID 15452 not found in process
+[0611/141843.340:ERROR:exception_snapshot_win.cc(98)] thread ID 4300 not found in process
+[0611/141843.340:ERROR:exception_snapshot_win.cc(98)] thread ID 6280 not found in process
+[0611/141843.340:ERROR:exception_snapshot_win.cc(98)] thread ID 16920 not found in process
